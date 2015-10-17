@@ -1,0 +1,142 @@
+/*From Template*/
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+.dollar-sign {
+  position:relative;
+  top:11px;
+}
+img.responsive-img, video.responsive-video {
+    max-width: 100%;
+}
+.price {
+  vertical-align: bottom;
+}
+
+.product-image {
+  height:100px;
+}
+.profile-image {
+  max-height: 300px;
+}
+textarea {
+  resize: none;
+}
+
+.left_nav{
+  margin-top: 20px;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.main{
+  display:inline-block;
+  vertical-align:top;}
+
+.item{
+  width:160px;
+  height:220px;
+  vertical-align: top;
+  text-align:center;
+  display:inline-block;
+  padding:8px;
+  margin: 15px;
+}
+.center {
+  margin-top:50px;
+  position:relative;
+}
+
+.main-container {
+  min-height: 700px;
+  padding: 0 35px 35px 35px;
+}
+
+/*.nav-tabs {
+  margin: 15px 0;
+  line-height: 36px;
+  height:36px;
+
+}*/
+
+.nav-tabs div {
+  display: inline-block;
+  position: relative;
+}
+.nav-tabs div:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 100%;
+  background: transparent;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.nav-tabs div:hover:after {
+  height: 3px;
+  background: #ff8f00;
+}
+/*.nav-tabs div:hover {
+  border-bottom: 3px solid blue;
+    width: 200px;
+}*/
+.left_nav label {
+  color: black;
+
+}
+.addProduct {
+  padding-left: 11.25px;
+}
+.addProduct label {
+  font-size: 15px;
+}
+/*.nav-tabs div:hover {
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+background-color: #FF8F00;
+-webkit-transition: all 0.3s ease-in;
+-moz-transition: all 0.3s ease-in;
+-o-transition: all 0.3s ease-in;
+
+-webkit-box-shadow: 0 8px 6px -6px #666;
+-moz-box-shadow: 0 8px 6px -6px #666;
+box-shadow: 0 8px 6px -6px #666;
+color: white;
+line-height: 36px;
+height:36px;
+}
+*/
+textarea {
+  border-color: #9E9E9E;
+}
+
+textarea:focus {
+  border-bottom: 1px solid #FF8F00;
+  -webkit-box-shadow: 0 1px 0 0 #FF8F00;
+  -moz-box-shadow: 0 1px 0 0 #FF8F00;
+  box-shadow: 0 1px 0 0 #FF8F00;
+}
+
+.error{
+    color:red;
+  }
+.action {
+  margin-top:30px;
+}
+div.col.s6.center.action {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.col.s6.center.action:hover{
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.addCustomerBtn {
+  position: relative;
+  top: 15px
+}

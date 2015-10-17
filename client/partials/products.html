@@ -1,0 +1,78 @@
+<div ng-controller="ProductsController">
+  <div class="row">
+    <div class="col s12 m3 addProduct">
+      <form name="productForm">
+        <div class="row">
+          <h5 class="addProduct">Add a New Product</h5>
+          <div class="col s12">
+            <label for="name">Name:</label>
+            <input type="text" name="name" ng-model="new_product.name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <label for="url">Image (url):</label>
+            <input type="text" name="url" ng-model="new_product.url" placeholder="Optional">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <label for="description">Description:</label>
+            <textarea name="description" ng-model="new_product.description" rows="16" placeholder="Optional"></textarea>
+          </div>
+        </div>
+        <select name="quantity" ng-model="new_product.quantity" class="browser-default" required>
+          <option value="" disabled selected>Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select></br>
+        <div class="col s12">
+            <label for="url">Price:</label>
+            <div class="row">
+              <div class="col s1">
+                <span class="dollar-sign">$</span>
+              </div>
+              <div class="col s10">
+                <input type="number" name="price" ng-model="new_product.price" min="1" max="9999" size="4" required>
+              </div>
+            </div>
+        </div>
+        <button type="submit" ng-click="addProduct()" ng-disabled="productForm.$invalid" class="btn right amber darken-3">Create</button>
+      </form>
+    </div>
+    <div class="col s12 m9">
+      <div class="main center">
+        <div class="row">
+          <div class="search col s8 offset-s2">
+            <input type="text" ng-model="filter_name" class="product center" placeholder="Search for a product">
+          </div>
+        </div>
+        <ul class="row">
+
+        </ul>
+        <div ng-repeat= "product in products | filter: filter_name | limitTo: paginationLimit()" class="item" >
+          <div class="product-image">
+            <a href="#/productprofile/{{product._id}}"><img src="{{ product.url }}" class="image responsive-img"></a>
+          </div>
+          <br>
+          <a href="#/productprofile/{{product._id}}">
+            <span>{{ product.name}}</span><br>
+            <span>({{ product.quantity }} left)</span><br>
+          </a>
+          <p class="price right-align">${{ product.price }}</p>
+        </div>
+        <div class="center">
+          <button ng-show="hasMoreItemsToShow()" ng-click="showMoreItems()" class="amber darken-3 btn">Show more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

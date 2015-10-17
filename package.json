@@ -1,0 +1,17 @@
+{
+  "name": "mikes_mini_mart",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "express": "~4.2.0",
+    "mongoose": "^4.0.6"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "eCommerce Website",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "Michael Tran",
+  "license": "ISC"
+}

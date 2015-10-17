@@ -1,0 +1,31 @@
+<div ng-controller="ProfileController">
+
+  <h1>Edit Product</h1>
+  <div class="row">
+    <div class="col s4 offset-s4 center">
+      <img src="{{ profile.url }}" class="profile-image responsive-img text-center"><br>
+      <span>{{ profile.name}}</span><br>
+      <span>({{ profile.quantity }} left)</span><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 center">
+      <div class="row">
+        <div class="col s12 m2">
+          <a href="#/productprofile/{{profile._id}}/edit" ng-click="editProduct({{profile._id}}" class="btn">Edit</a>
+        </div>
+        <div class="col s12 m2">
+          <a href="#/products" ng-click="deleteProduct({{profile._id}})" class="btn">Delete</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="col s2 offset-s1">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s1">
+      <a href="#/products"><button class="btn blue-grey lighten-2">Back</button></a>
+    </div>
+  </div>
+</div>

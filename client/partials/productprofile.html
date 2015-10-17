@@ -1,0 +1,130 @@
+<div ng-controller="ProfileController">
+    
+  </script>
+  <div class="row">
+    <div class="col s4 center">
+      <img src="{{ profile.url }}" class="profile-image responsive-img text-center"><br>
+      <h4>{{ profile.name}}</h4>
+      <h5>({{ profile.quantity }} left)</h5>
+      <p class="price right-align">${{ profile.price}}</p>
+    </div>
+    <div class="col s4 offset-s2">
+      <label for="name">Name:</label>
+      <input id="name" type="text" name="name" ng-model="profile.name">
+      <div class="row">
+    <div class="col s12">
+      <label for="url">Image (url):</label>
+      <input id="url" type="text" name="url" ng-model="profile.url">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" ng-model="profile.description" rows="16"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <label for="quantity">Quantity:</label>
+      <select name="quantity" ng-model="profile.quantity" class="browser-default">
+        <option value="" disabled selected>Quantity</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+        <label for="url">Price:</label>
+        <div class="row">
+          <div class="col s1">
+            <span class="dollar-sign">$</span>
+          </div>
+          <div class="col s10">
+            <input type="number" name="price" ng-model="profile.price" min="1" max="9999" size="4" required>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m6">
+      <a href="#/products" ng-click="updateProduct()" class="btn">Update</a>
+    </div>
+    <div class="col s12 m6">
+      <a href="#/products" ng-click="removeProduct(profile)" class="btn red lighten-2">Delete</a>
+    </div>
+  </div>
+    </div>
+
+  </div>
+  <!-- <div class="row">
+    <div class="col s4 offset-s4">
+      <label for="name">Name:</label>
+      <input id="name" type="text" name="name" ng-model="profile.name">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s4 offset-s4">
+      <label for="url">Image (url):</label>
+      <input id="url" type="text" name="url" ng-model="profile.url">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s4 offset-s4">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" ng-model="profile.description" rows="16"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s4 offset-s4">
+      <label for="quantity">Quantity:</label>
+      <select name="quantity" ng-model="profile.quantity" class="browser-default">
+        <option value="" disabled selected>Quantity</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s4 offset-s4">
+        <label for="url">Price:</label>
+        <div class="row">
+          <div class="col s1">
+            <span class="dollar-sign">$</span>
+          </div>
+          <div class="col s10">
+            <input type="number" name="price" ng-model="new_product.price" min="1" max="9999" size="4" required>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m2 offset-m4">
+      <a href="#/products" ng-click="updateProduct()" class="btn">Update</a>
+    </div>
+    <div class="col s12 m2">
+      <a href="#/products" ng-click="removeProduct(profile)" class="btn red lighten-2">Delete</a>
+    </div>
+  </div> -->
+  <div class="row">
+    <div class="col s1">
+      <a href="#/products"><button class="btn blue-grey lighten-2">Back</button></a>
+    </div>
+  </div>
+</div>
