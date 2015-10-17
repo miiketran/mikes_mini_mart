@@ -2,12 +2,17 @@
   "name": "mikes_mini_mart",
   "version": "0.0.1",
   "dependencies": {
-    "body-parser": "^1.13.1",
-    "express": "~4.2.0",
-    "mongoose": "^4.0.6"
+    "body-parser": "^1.14.1",
+    "express": "^4.2.0",
+    "mongoose": "^4.0.6",
+    "path": "^0.12.7"
   },
   "scripts": {
     "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miiketran/mikes_mini_mart"
   },
   "description": "eCommerce Website",
   "main": "server.js",
