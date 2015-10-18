@@ -14,6 +14,7 @@ myApp.factory('CustomerFactory', function($http){
         error(output);
       } else {
         customers.push({name: output.name, created_at: output.created_at, _id: output._id})
+        Materialize.toast("Successfully Added Customer", 4000);
         callback(customers);
       }
     })
@@ -23,6 +24,7 @@ myApp.factory('CustomerFactory', function($http){
       for(var i=0; i<customers.length; i++){
         if(customers[i]._id == customer._id){
           customers.splice(i,1);
+          Materialize.toast("Successfully Removed Customer", 4000);
           return;
         }
       }

@@ -13,6 +13,7 @@ myApp.factory('ProductFactory', function($http){
         error(output);
       } else {
         products.push({name: output.name, url: output.url, description: output.description, quantity: output.quantity, price: output.price})
+        Materialize.toast("Successfully Added " + output.name, 4000);
         callback(products);
       }
     })
