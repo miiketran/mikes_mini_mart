@@ -1,8 +1,19 @@
 var mongoose = require('mongoose');
 var fs = require('fs');
 
+var uristring =
+process.env.MONGOLAB_URI ||
+process.env.MONGOHQ_URL ||
+'mongodb://localhost/mini_mean_store';
+
 // connect to the database
-mongoose.connect('mongodb://localhost/mini_mean_store');
+mongoose.connect(uristring, function(err, res) {
+  if (err) {
+  console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+  } else {
+  console.log ('Succeeded connected to: ' + uristring);
+  }
+});
 // loads all of the model files
 var models_path = __dirname + '/../server/models';
 // for each file in the path
