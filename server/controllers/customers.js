@@ -20,7 +20,6 @@ module.exports = {
     var date_str = month + ' ' + mydate.getDate()+ ", "+ mydate.getFullYear();
 
 
-    console.log("adding");
     Customer.find({}, function(err, results){
       if(err){
         console.log("error");
