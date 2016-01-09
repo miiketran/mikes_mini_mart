@@ -47,14 +47,12 @@ module.exports = {
       if(err){
         console.log(err);
       } else {
-        console.log(result);
         res.json(result);
       }
     })
   },
   remove: function(req,res){
-    console.log(req.body);
-    Product.remove({_id: req.body._id}, function(err,products){
+    Product.remove({_id: req.params.id}, function(err,products){
       if(err){
         console.log("Error");
       } else {
@@ -69,21 +67,12 @@ module.exports = {
     if(!req.body.description){
       req.body.description = "";
     }
-    Product.update({_id: req.body._id}, {name: req.body.name, url: req.body.url, description: req.body.description, quantity: req.body.quantity, price: req.body.price}, function(err, result){
+    Product.update({_id: req.params.id}, {name: req.body.name, url: req.body.url, description: req.body.description, quantity: req.body.quantity, price: req.body.price}, function(err, result){
       if(err){
         console.log("Error");
       } else {
         res.end();
       }
     });
-  },
-  getPrice: function(req,res){
-    Product.findOne({name: req.body.product}, function(err, result){
-      if(err){
-        console.log(err);
-      } else {
-        res.json(result.price);
-      }
-    })
   }
 }

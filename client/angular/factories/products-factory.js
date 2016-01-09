@@ -8,7 +8,7 @@ myApp.factory('ProductFactory', function($http){
     });
   }
   factory.addProduct = function(info, callback, error){
-    $http.post('addProduct',info).success(function(output){
+    $http.post('/product',info).success(function(output){
       if(typeof(output) == "string"){
         error(output);
       } else {
@@ -16,11 +16,6 @@ myApp.factory('ProductFactory', function($http){
         Materialize.toast("Successfully Added " + output.name, 4000);
         callback(products);
       }
-    })
-  }
-  factory.getPrice = function(profile, callback) {
-    $http.post('/getPrice', profile).success(function(output) {
-      callback(output);
     })
   }
   return factory;

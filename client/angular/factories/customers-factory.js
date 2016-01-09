@@ -9,7 +9,7 @@ myApp.factory('CustomerFactory', function($http){
 
   }
   factory.addCustomer = function(info, callback, error){
-    $http.post('/addCustomer',info).success(function(output){
+    $http.post('/customer',info).success(function(output){
       if(typeof(output) == "string"){
         error(output);
       } else {
@@ -20,7 +20,7 @@ myApp.factory('CustomerFactory', function($http){
     })
   }
   factory.removeCustomer = function(customer){
-    $http.post('/removeCustomer', customer).success(function(){
+    $http.delete('/customer', customer).success(function(){
       for(var i=0; i<customers.length; i++){
         if(customers[i]._id == customer._id){
           customers.splice(i,1);

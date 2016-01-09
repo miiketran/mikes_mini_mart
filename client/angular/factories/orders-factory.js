@@ -9,7 +9,7 @@ myApp.factory('OrderFactory', function($http){
 
   }
   factory.addOrder = function(info, callback){
-    $http.post('/add',info).success(function(added_order){
+    $http.post('/order',info).success(function(added_order){
       orders.push({name: added_order.name, product: added_order.product, quantity: added_order.quantity, total_price: added_order.total_price, date: added_order.date})
       Materialize.toast("Successfully Added Order", 4000);
       callback(orders);
@@ -17,7 +17,7 @@ myApp.factory('OrderFactory', function($http){
   }
   factory.removeOrder = function(order){
     console.log("factory");
-    $http.post('/removeOrder', order).success(function(){
+    $http.delete('/order', order).success(function(){
       for(var i=0; i<orders.length; i++){
         if(orders[i]._id == order._id){
           orders.splice(i,1);

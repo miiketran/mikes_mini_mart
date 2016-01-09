@@ -10,13 +10,14 @@ myApp.factory('ProfileFactory', function($http){
       callback(profile);
     });
   }
-  factory.removeProduct = function(profile) {
-    $http.post('/removeProduct', profile).success(function(){
+  factory.removeProduct = function() {
+    console.log(profile_id);
+    $http.delete('/product/'+ profile_id).success(function(){
       Materialize.toast("Successfully Deleted", 4000);
     });
   }
   factory.updateProduct = function(profile) {
-    $http.post('/updateProduct', profile).success(function(){
+    $http.put('/product/'+profile_id, profile).success(function(){
       Materialize.toast("Successfully Updated", 4000);
     });
   }

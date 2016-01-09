@@ -1,10 +1,14 @@
 var mongoose = require('mongoose');
 var fs = require('fs');
 
+// connect to the database
+// mongoose.connect('mongodb://localhost/mini_mean_store');
+
 var uristring =
 process.env.MONGOLAB_URI ||
 process.env.MONGOHQ_URL ||
 'mongodb://localhost:5000/mini_mean_store';
+
 
 // connect to the database
 mongoose.connect(uristring, function(err, res) {

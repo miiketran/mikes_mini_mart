@@ -7,8 +7,8 @@ myApp.controller('ProfileController', function($scope, $routeParams, ProfileFact
       $scope.profile_id = output._id;
     });
   }
-  $scope.removeProduct = function(profile) {
-    ProfileFactory.removeProduct(profile);
+  $scope.removeProduct = function() {
+    ProfileFactory.removeProduct();
   }
 
   $scope.updateProduct = function(){
